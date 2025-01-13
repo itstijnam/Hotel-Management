@@ -1,0 +1,7 @@
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 0.9rem 0 0.8rem;
+}

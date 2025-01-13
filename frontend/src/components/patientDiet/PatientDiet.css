@@ -1,0 +1,59 @@
+ .generalPatientDietBox {
+     display: flex;
+     overflow: hidden;
+ }
+
+.createDietBox {
+     width: 80rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 0.99rem 0;
+     background-color: #ffffff;
+}
+
+.patientDietForm {
+     background-color: #33333315;
+     display: flex;
+     flex-direction: column;
+     padding: 2rem 2rem;
+     width: 40rem;
+     border-radius: 0.5rem;
+     box-shadow: 3px 3px 10px black;
+}
+
+.patientDietForm label {
+     display: flex;
+     font-weight: bold;
+     position: relative;
+     width: 100%;
+}
+.patientDietForm div{
+    width: 100%;
+    display: flex;
+}
+ form h3 {
+     margin-top: 20px;
+     font-size: 1.2rem;
+     color: #333;
+ }
+
+Input[type="text"] {
+     width: 90%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+}
+
+textarea {
+     width: 50%;
+     height: 80px;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+     resize: none;
+     background-color: #f9f9f9;
+}

@@ -1,0 +1,32 @@
+.addPatientOuterLayer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+.APLeftBox{
+    width: 15rem;
+}
+.APRightBox{
+    width: 85rem;
+    /* border: 2px solid green; */
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.APRightBox form {
+    box-shadow: 3px 3px 8px black;
+    width: 40rem;
+    border: 2px solid rgba(61, 60, 58, 0.338);
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: left;
+    padding: 4rem;
+    
+}
+.addPatientInput{
+    position: relative;
+    width: 100%;
+}

@@ -1,0 +1,32 @@
+.leftSideBar {
+    box-shadow: 2px 2px 5px black;
+    background-color: #333333;
+  }
+
+.LFTADMNnameDis{
+  font-size: 1.5rem;
+  color: orangered;
+  text-align: center;
+}
+.managerTaskList{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+.singleNavitem{
+  /* border: 2px solid green; */
+  height: 2.6rem;
+  position: relative;
+  display: flex;
+  padding: 0rem 1rem 0rem 1rem;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+.singleNavLink{
+  /* border: 2px solid pink; */
+  height: 100%;
+}
+.singleNavitem:hover{
+  background-color: rgb(131, 131, 158);
+}

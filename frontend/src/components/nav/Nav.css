@@ -1,0 +1,8 @@
+.navbarList{
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 0.8rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+}

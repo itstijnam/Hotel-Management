@@ -1,0 +1,45 @@
+.LoginFormContainer{
+    position: absolute;
+    margin: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginFormBox{
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.451);
+    border-radius: 4px;
+    box-shadow: 1px 2px 5px black;
+    position: relative;
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.8rem;
+}
+.logoDetail{
+    height: 15%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginImage{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.loginImage img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}

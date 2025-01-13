@@ -1,0 +1,37 @@
+.rightSideBar {
+  border: 2px solid red;
+}
+
+.createDiet {
+  height: 20rem;
+  overflow-y: auto;
+}
+
+.createDiet::-webkit-scrollbar {
+  width: 6px;
+}
+
+.createDiet::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.createDiet::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.createDiet::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.createPatientChart{
+  cursor: pointer;
+  background-color: #333333c0;
+  box-shadow: 1px 1px 5px white;
+}
+.createPatientChart:hover {
+  background-color: #33333355;
+}
+
+.createPatientChart span:hover{
+  color: orange;
+}

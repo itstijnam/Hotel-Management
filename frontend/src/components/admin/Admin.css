@@ -1,0 +1,10 @@
+.adminBox {
+display: flex;
+justify-content: space-between;
+}
+.adminPageLeftBox{
+    width: 15rem;
+}
+.adminPageRightBox{
+    width: 85rem;
+}
