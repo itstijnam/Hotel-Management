@@ -8,7 +8,7 @@ const useGetAllPatient = () => {
     useEffect(() => {
         const fetchAllPatient = async () => {
             try {
-                const res = await axios.get('http://localhost:3000/api/auth/patient', { withCredentials: true });
+                const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/patient`, { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setAllPatient(res.data.patients));
                 }

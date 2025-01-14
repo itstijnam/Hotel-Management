@@ -11,7 +11,7 @@ function LeftSideBar() {
     { text: "Manage Pantry", pageUrl: "admin/pantry/manage" },
     { text: "Track Deliveries", pageUrl: "admin/deliveries/track" },
     { text: " + Add Staff", pageUrl: "admin/add-staff" },
-    { text: " + Add Pantry Task", pageUrl: "admin/pantry-staff/create" },
+    { text: " + Add Pantry Staff", pageUrl: "admin/pantry-staff/create" },
   ];
 
   const sidebarHandler = (pageUrl) => {

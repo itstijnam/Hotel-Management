@@ -16,7 +16,7 @@ function Home() {
     const logoutHandler = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.get('http://localhost:3000/api/auth/logout', { withCredentials: true });
+            const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/logout`, { withCredentials: true });
             if (res.data.success) {
                 console.log(user)
                 toast.success(res.data.message)

@@ -13,20 +13,13 @@ const generateToken = (user) => {
 
 export const signup = async (req, res) => {
   try {
-    const { name, role, email, password } = req.body;
+    const { email, password } = req.body;
 
-    if(!name || !role || !email || !password){
+    if(!email || !password){
       return res.status(400).json({
         message: 'Please enter all details',
         success: false
       })
-    }
-
-    if (!["Admin", "PantryStaff", "DeliveryPersonnel"].includes(role)) {
-      return res.status(400).json({
-        message: "Choose among Admin, Pantry Staff or Food Delivery",
-        success: false
-      });
     }
 
     const existingUser = await User.findOne({ email });
@@ -40,14 +33,13 @@ export const signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     await User.create({
-      name,
       email,
       password: hashedPassword,
-      role,
+      role: 'Admin',
     });
 
     return res.status(201).json({
-      message: "User registered successfully",
+      message: "Manager registered successfully",
       success: true
     });
 
@@ -104,56 +96,37 @@ export const logout = async (_, res) => {
   }
 }
 
-export const createPantryStaff = async (req, res) => {
+export const createPantryStaff = async (req, res)=>{
   try {
-    const { name, contactInfo, location, tasks, userId } = req.body;
-
-    if (!name || !contactInfo || !userId) {
+    const {name, contactInfo, location, email, password} = req.body;
+    if(!name || !contactInfo || !location){
       return res.status(400).json({
-        message: "Please provide all required fields: name, contactInfo, and userId",
-        success: false,
-      });
+        message: 'Please fill all details',
+        success: false
+      })
     }
 
-    const user = await User.findById(userId);
-    if (!user) {
-      return res.status(404).json({
-        message: "User not found",
-        success: false,
-      });
-    }
-
-    if (user.role !== "PantryStaff") {
-      return res.status(400).json({
-        message: "User must have the role of PantryStaff to create a PantryStaff entry",
-        success: false,
-      });
-    }
+    const staff = await PantryStaff.findOne({email})
+    if(staff) return res.status(400).json({message: 'Try another mail', success: false})
 
     await PantryStaff.create({
       name,
       contactInfo,
       location,
-      tasks,
-      user: userId,
-    });
+      email,
+      password,
+      role: 'PantryStaff',
+    })
 
-
-    return res.status(201).json({
-      message: "PantryStaff created successfully",
+    return res.status(200).json({
       success: true,
-      data: populatedPantryStaff,
-    });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({
-      message: "An error occurred while creating PantryStaff",
-      success: false,
-      error: error.message,
-    });
-  }
-};
+      message: 'staff member has added successfully'
+    })
 
+  } catch (error) {
+    
+  }
+}
 
 export const getAllStaff = async (req, res) => {
   try {

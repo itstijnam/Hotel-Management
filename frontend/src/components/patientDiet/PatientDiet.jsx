@@ -60,7 +60,7 @@ const PatientDiet = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/auth/patient/create-diet/${patientId}`,
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/patient/create-diet/${patientId}`,
         { meals },
         { withCredentials: true }
       );

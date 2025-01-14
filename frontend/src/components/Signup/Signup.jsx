@@ -24,7 +24,7 @@ function Signup() {
   const createAccountHandler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:3000/api/auth/signup`, input, {
+      const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/signup`, input, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true
       })
@@ -59,14 +59,7 @@ function Signup() {
               />
             </div>
             <div>
-              <label>Role:</label>
-              <Input
-                type="text"
-                name="role"
-                value={input.role}
-                onChange={changeEventHandler}
-                required
-              />
+              <label>MANAGER:</label>
             </div>
           </div>
           <div className='flex'>

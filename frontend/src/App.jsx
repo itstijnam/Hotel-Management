@@ -10,7 +10,7 @@ import AdminPage from './pages/AdminPage';
 import Patient from './components/patientDiet/PatientDiet';
 import AddPatient from './components/addPatient/AddPatient';
 import PatientDiet from './components/patientDiet/PatientDiet';
-import CreatePantryStaff from './components/createPantryStaff/CreatePantryStaff';
+import CreatePantryStaff from './components/createPantryStaff/createPantryStaff';
 
 const router = createBrowserRouter([
   {

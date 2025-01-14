@@ -27,7 +27,7 @@ function AddPatient() {
     const addPatientHandler = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`http://localhost:3000/api/auth/patient/create`, input,{
+            const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/patient/create`, input,{
                 headers: {'Content-Type': 'application/json'},
                 withCredentials: true
             })
