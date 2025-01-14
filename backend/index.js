@@ -27,15 +27,13 @@ app.get('/', (_, res)=>{
 
 
 const corsOption = {
-    origin: 'http://localhost:5173',
+    origin: process.env.FRONTEND_URI,
     credentials: true
 }
 app.use(cors(corsOption));
 
-// Routes
 app.use("/api/auth", authRoutes);
 
-// Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     connectDB();
